@@ -8,7 +8,7 @@ def get_soup(url):
     """
     page = requests.get(url)
     soup = BeautifulSoup(page.text, 'html.parser')
-    print "type: ", type(soup)
+    print("type: ", type(soup))
     return soup
 get_soup("https://fair.org/counterspin/feed")
 
@@ -24,7 +24,7 @@ def get_playable_podcast(soup):
         try:        
             link = content.find('enclosure')
             link = link.get('url')
-            print "\n\nLink: ", link
+            print("\n\nLink: ", link)
 
             title = content.find('title')
             title = title.get_text()
@@ -46,7 +46,7 @@ def get_playable_podcast(soup):
         }
         
         subjects.append(item) 
-     return subjects
+    return subjects
 
 def compile_playable_podcast(playable_podcast):
     """
@@ -76,7 +76,7 @@ def get_playable_podcast1(soup):
         try:        
             link = content.find('enclosure')
             link = link.get('url')
-            print "\n\nLink: ", link
+            print("\n\nLink: ", link)
 
             title = content.find('title')
             title = title.get_text()
@@ -98,7 +98,7 @@ def get_playable_podcast1(soup):
         }
         
         subjects.append(item) 
-     return subjects
+    return subjects
 
 def compile_playable_podcast1(playable_podcast1):
     """
