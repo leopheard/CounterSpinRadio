@@ -10,7 +10,7 @@ def get_soup(url):
     soup = BeautifulSoup(page.text, 'html.parser')
     print("type: ", type(soup))
     return soup
-get_soup("https://fair.org/counterspin/feed")
+get_soup("https://fair.org/counterspin/feed/")
 
 
 def get_playable_podcast(soup):
